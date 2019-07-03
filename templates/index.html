@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = 'utf-8'>
+    <title>
+        welcome to my blog
+    </title>
+</head>
+<body>
+    <h1>LMAO this is meaningless</h1>
+    <hr>
+    {% for post in posts %}
+        <p style = 'font-family:Times-Romen8hb；font-size:16pt; font-weight:blod;'>
+            <a href = '/post/ {{post.slug}}'> {{post.title}}</a>
+            {{post.title}}
+        </p>
+    {% endfor %}
+    <hr>
+    <h3>time is: {{now}} </h3>
+</body>
+</html>

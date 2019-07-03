@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset = 'utf-8'>
-    <title>
-        welcome to my blog
-    </title>
-</head>
-<body>
-    <h1>LMAO this is meaningless</h1>
-    <hr>
+<!-- index.html -->
+{% extends 'base.html' %}
+{% block title %} LMAO thid is useless {% endblock %}
+{% block headmessage %} 
+    <h3 style = 'font-family:微软雅黑;'> LMAO this wouldnot work
+{% endblock %}
+{% block content %}
     {% for post in posts %}
         <p style = 'font-family:Times-Romen8hb；font-size:16pt; font-weight:blod;'>
-            <a href = '/post/ {{post.slug}}'> {{post.title}}</a>
-            {{post.title}}
+            <a herf ='/post/{{post.slug}}'>{{post.title}}</a>
         </p>
     {% endfor %}
-    <hr>
-    <h3>time is: {{now}} </h3>
-</body>
-</html>
+{% endblock %}

@@ -7,13 +7,47 @@
     <title>
         {% block title %} {% endblock %}
     </title>
+    <!-- latest complied and minified CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
 </head>
 <body>
-    {% include 'header.html' %}
-    {% block headmessage %} {% endblock %}
-    <hr>
-    {% block content %} {% endblock %}
-    <hr>
-    {% include 'footer.html'%}
+    <div class = 'container-fluid'>
+        {% include 'header.html' %}
+        <div class = 'row'>
+            <div class = 'col-sm-4 col-dm-4'>
+                <div class = 'panel panel-default'>
+                    <div class = 'panel-heading'>
+                        <h3>
+                            Not a menu
+                        </h3>
+                    </div>
+                    <div class = 'panel-body'>
+                        <div class = 'list group'>
+                            <a href = '/'class = 'list-group-item'>HOME</a>
+                            <a   href = 'http://tar.so/news' class = 'list-group-item'>No-idea what is this </a>
+                            <a   href = 'http://drho.tw/news' class = 'list-group-item'>Also dont know what is it</a>
+                        </div>
+                        <iframe src="https://open.spotify.com/embed/playlist/19R2UDmwMQQY8mKtUXX36b" width="485" height="280" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class = 'col-sm-8 col-dm-8'>
+                <div class = 'panel panel-default'>
+                    <div class = 'panel-heading'>
+                        {% block headmessage %} {% endblock %}
+                    </div>
+                    <div class = 'panel-body'>
+                        {% block content %} {% endblock %}
+                    </div>
+                    <div class = 'panel-footer'>
+                        {% include 'footer.html'%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

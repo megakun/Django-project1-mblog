@@ -2,12 +2,22 @@
 {% extends 'base.html' %}
 {% block title %} LMAO thid is useless {% endblock %}
 {% block headmessage %} 
-    <h3 style = 'font-family:微软雅黑;'> LMAO this wouldnot work
+    <h3 style = 'font-family:微软雅黑;'> LMAO this wouldnot work </a>
 {% endblock %}
 {% block content %}
     {% for post in posts %}
-        <p style = 'font-family:微软雅黑; font-size:16pt; font-weight:blod;'>
-            <a href = '/post/{{post.slug}}'>{{ post.title }}</a>
-        </p>
+        <div class ='panel panel-default'>
+            <div class = 'panel-heading'>
+                <p style = 'font-family:微软雅黑; font-size:16pt; font-weight:blod;'>
+                    <a href = '/post/{{post.slug}}'>{{ post.title }}</a>
+                </p>
+            </div>
+            <div class = 'panel-body' style = 'background-color:#ffffdd'>
+                <p>
+                    {{post.body | truncatechars:20}}
+                </p>
+            </div> 
+        </div>
+    <br>  
     {% endfor %}
 {% endblock %}

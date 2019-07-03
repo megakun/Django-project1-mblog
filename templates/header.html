@@ -1,4 +1,13 @@
 <!-- header.html -->
+{% load staticfiles %} {#only once#}
 <div class = 'well'>
-    <h1 style = "font-family:微软雅黑;"> This is really not working
+    <div class = 'row'>
+            <div class = 'col-sm-4 col-dm-4'>
+                <img src = "{% static "images/head.png" %}", alt = "goofy img">
+            </div>
+            <div class = 'col-sm-8 col-dm-8'>
+                <h1 style = "font-family:微软雅黑;"> This is really not working </h1>
+            </div>
+    </div>
+
 </div>
